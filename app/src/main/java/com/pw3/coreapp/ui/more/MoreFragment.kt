@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.pw3.CoreApp.databinding.FragmentStudentsBinding
+import com.pw3.CoreApp.databinding.FragmentMoreBinding
 
 class MoreFragment : Fragment() {
 
-    private var _binding: FragmentStudentsBinding? = null
+    private var _binding: FragmentMoreBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +25,7 @@ class MoreFragment : Fragment() {
         val homeViewModel =
             ViewModelProvider(this).get(MoreViewModel::class.java)
 
-        _binding = FragmentStudentsBinding.inflate(inflater, container, false)
+        _binding = FragmentMoreBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textHome
