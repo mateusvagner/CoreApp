@@ -1,0 +1,12 @@
+<resources>
+    <attr name="colorExtra_orange" format="color" />
+    <attr name="colorOnExtra_orange" format="color" />
+    <attr name="colorExtra_orangeContainer" format="color" />
+    <attr name="colorOnExtra_orangeContainer" format="color" />
+    <attr name="harmonizeExtra_orange" format="boolean" />
+    <attr name="colorExtra_blue" format="color" />
+    <attr name="colorOnExtra_blue" format="color" />
+    <attr name="colorExtra_blueContainer" format="color" />
+    <attr name="colorOnExtra_blueContainer" format="color" />
+    <attr name="harmonizeExtra_blue" format="boolean" />
+</resources>
