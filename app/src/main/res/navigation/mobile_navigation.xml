@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/main">
+
+    <fragment
+        android:id="@+id/main"
+        android:name="com.pw3.coreapp.ui.main.MainFragment"
+        android:label="@string/title_welcome"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_main_to_students"
+            app:destination="@id/students" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/students"
+        android:name="com.pw3.coreapp.ui.students.StudentsFragment"
+        android:label="@string/title_students"
+        tools:layout="@layout/fragment_students" />
+
+    <fragment
+        android:id="@+id/calendar"
+        android:name="com.pw3.coreapp.ui.calendar.CalendarFragment"
+        android:label="@string/title_calendar"
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/financial"
+        android:name="com.pw3.coreapp.ui.financial.FinancialFragment"
+        android:label="@string/title_financial"
+        tools:layout="@layout/fragment_financial" />
+
+    <fragment
+        android:id="@+id/more"
+        android:name="com.pw3.coreapp.ui.more.MoreFragment"
+        android:label="@string/title_more"
+        tools:layout="@layout/fragment_more" />
+</navigation>

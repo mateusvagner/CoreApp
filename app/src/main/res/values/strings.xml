@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Core App</string>
+
+    <!--Screen Title-->
+    <string name="title_welcome">Welcome</string>
+    <string name="title_calendar">Calendar</string>
+    <string name="title_students">Students</string>
+    <string name="title_financial">Financial</string>
+    <string name="title_more">More</string>
+
+</resources>
