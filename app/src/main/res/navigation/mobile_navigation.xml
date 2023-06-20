@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_main_to_students"
-            app:destination="@id/students" />
+            app:destination="@id/students"
+            app:popUpTo="@+id/main"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_main_to_login"
             app:destination="@id/login" />
