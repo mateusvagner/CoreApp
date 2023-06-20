@@ -9,9 +9,25 @@
     <string name="title_more">More</string>
     <string name="title_login">Login</string>
 
-    <!-- Login -->
+    <!-- User -->
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="new_account">New Account</string>
+    <string name="logout">Logout</string>
+
+    <!-- Action -->
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+
+    <!-- Alerts -->
+    <string name="create_account_failed_title">Erro ao criar uma nova conta</string>
+    <string name="create_account_failed_message">Erro ao criar uma nova conta</string>
+    <string name="email_needed_error_message">O e-mail deve ser preenchido</string>
+    <string name="email_not_valid_error_message">O e-mail não é válido</string>
+    <string name="password_needed_error_message">O password deve ser preenchido</string>
+    <string name="password_not_valid_error_message">O password não é válido</string>
+
 
 </resources>

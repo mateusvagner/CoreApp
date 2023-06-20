@@ -5,15 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:paddingHorizontal="24dp"
     tools:context="com.pw3.coreapp.ui.main.MainFragment">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/students_button"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/ic_core_app_launcher"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title_students"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="56dp"
+        android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/app_icon" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/new_account_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/new_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

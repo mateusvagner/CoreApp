@@ -52,7 +52,7 @@
         <item name="colorOnExtra_blueContainer">#001f26</item>
         <item name="harmonizeExtra_blue">false</item>
         <item name="colorPrimaryInverse">@color/light_inversePrimary</item>
-        <item name="actionBarStyle">@style/Theme.CoreApp.ActionBar</item>
+<!--        <item name="actionBarStyle">@style/Theme.CoreApp.ActionBar</item>-->
         <!--        <item name="android:statusBarColor">@color/white</item>-->
     </style>
 

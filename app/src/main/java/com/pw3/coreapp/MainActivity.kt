@@ -1,10 +1,8 @@
 package com.pw3.coreapp
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -17,7 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.pw3.CoreApp.R
 import com.pw3.CoreApp.databinding.ActivityMainBinding
-
+import com.pw3.coreapp.ui.main.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
 
-    private var originalInsets: WindowInsetsCompat? = null
+    private val viewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +47,14 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNavView.setupWithNavController(navController)
         drawerNavView.setupWithNavController(navController)
+
+        drawerNavView.menu.findItem(R.id.logout).setOnMenuItemClickListener {
+            viewModel.logoutUser()
+            val intent = intent
+            finish()
+            startActivity(intent)
+            return@setOnMenuItemClickListener true
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

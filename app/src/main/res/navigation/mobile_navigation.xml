@@ -9,10 +9,16 @@
         android:id="@+id/main"
         android:name="com.pw3.coreapp.ui.main.MainFragment"
         android:label="@string/title_welcome"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_main_to_students"
             app:destination="@id/students" />
+        <action
+            android:id="@+id/action_main_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_main_to_newAccount"
+            app:destination="@id/newAccount" />
     </fragment>
 
     <fragment
@@ -38,4 +44,17 @@
         android:name="com.pw3.coreapp.ui.more.MoreFragment"
         android:label="@string/title_more"
         tools:layout="@layout/fragment_more" />
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.pw3.coreapp.ui.login.LoginFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/newAccount"
+        android:name="com.pw3.coreapp.ui.createAccount.CreateAccountFragment"
+        android:label="@string/create_account"
+        tools:layout="@layout/fragment_login" />
+
 </navigation>
