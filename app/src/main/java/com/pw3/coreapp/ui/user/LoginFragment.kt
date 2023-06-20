@@ -1,21 +1,16 @@
-package com.pw3.coreapp.ui.login
+package com.pw3.coreapp.ui.user
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.withCreated
-import androidx.navigation.fragment.findNavController
 import com.pw3.CoreApp.R
 import com.pw3.CoreApp.databinding.FragmentLoginBinding
-import com.pw3.CoreApp.databinding.FragmentMainBinding
 import com.pw3.coreapp.MainActivity
-import com.pw3.coreapp.ui.main.MainFragmentDirections
 import com.pw3.coreapp.ui.main.MainViewModel
 import com.pw3.coreapp.ui.util.showDialogCustom
 import com.pw3.coreapp.util.isValidEmail

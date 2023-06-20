@@ -47,13 +47,13 @@
 
     <fragment
         android:id="@+id/login"
-        android:name="com.pw3.coreapp.ui.login.LoginFragment"
+        android:name="com.pw3.coreapp.ui.user.LoginFragment"
         android:label="@string/title_login"
         tools:layout="@layout/fragment_login" />
 
     <fragment
         android:id="@+id/newAccount"
-        android:name="com.pw3.coreapp.ui.createAccount.CreateAccountFragment"
+        android:name="com.pw3.coreapp.ui.user.CreateAccountFragment"
         android:label="@string/create_account"
         tools:layout="@layout/fragment_login" />
 
