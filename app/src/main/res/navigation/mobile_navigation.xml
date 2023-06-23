@@ -25,9 +25,13 @@
 
     <fragment
         android:id="@+id/students"
-        android:name="com.pw3.coreapp.ui.students.all.StudentsFragment"
+        android:name="com.pw3.coreapp.ui.students.allStudents.StudentsFragment"
         android:label="@string/title_students"
-        tools:layout="@layout/fragment_students" />
+        tools:layout="@layout/fragment_students" >
+        <action
+            android:id="@+id/action_students_to_newStudentFragment"
+            app:destination="@id/newStudentFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/calendar"
@@ -58,5 +62,11 @@
         android:name="com.pw3.coreapp.ui.user.CreateAccountFragment"
         android:label="@string/create_account"
         tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/newStudentFragment"
+        android:name="com.pw3.coreapp.ui.students.newStudent.NewStudentFragment"
+        android:label="@string/title_new_student"
+        tools:layout="@layout/fragment_new_student"/>
 
 </navigation>
