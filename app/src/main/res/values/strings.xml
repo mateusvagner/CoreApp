@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Core App</string>
 
-    <!-- Screen Title-->
+    <!-- Screen Title -->
     <string name="title_welcome">Welcome</string>
     <string name="title_calendar">Calendar</string>
     <string name="title_students">Students</string>
@@ -22,12 +22,19 @@
     <string name="ok">OK</string>
 
     <!-- Alerts -->
-    <string name="create_account_failed_title">Erro ao criar uma nova conta</string>
-    <string name="create_account_failed_message">Erro ao criar uma nova conta</string>
-    <string name="email_needed_error_message">O e-mail deve ser preenchido</string>
-    <string name="email_not_valid_error_message">O e-mail não é válido</string>
-    <string name="password_needed_error_message">O password deve ser preenchido</string>
-    <string name="password_not_valid_error_message">O password não é válido</string>
+    <string name="create_account_failed_title">Something went wrong</string>
+    <string name="create_account_failed_message"> Error when creating a new account</string>
+    <string name="email_needed_error_message">The email must be filled in</string>
+    <string name="email_not_valid_error_message">The email is not valid</string>
+    <string name="password_needed_error_message">The password must be filled in</string>
+    <string name="password_not_valid_error_message">The password is not valid</string>
 
+    <!-- Student -->
+    <string name="student_status_active">Active</string>
+    <string name="student_status_inactive">Inactive</string>
+    <string name="student_status_on_pause">On Pause</string>
+    <string name="student_payment_status_paid">Paid</string>
+    <string name="student_payment_status_delayed">Delayed</string>
+    <string name="student_add_button">Student Add Button</string>
 
 </resources>
