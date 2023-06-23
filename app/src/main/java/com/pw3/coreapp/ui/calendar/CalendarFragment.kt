@@ -23,7 +23,7 @@ class CalendarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val dashboardViewModel =
-            ViewModelProvider(this).get(CalendarViewModel::class.java)
+            ViewModelProvider(this)[CalendarViewModel::class.java]
 
         _binding = FragmentCalendarBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -39,4 +39,5 @@ class CalendarFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }

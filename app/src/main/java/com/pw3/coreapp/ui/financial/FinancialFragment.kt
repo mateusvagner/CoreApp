@@ -23,7 +23,7 @@ class FinancialFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val notificationsViewModel =
-            ViewModelProvider(this).get(FinancialViewModel::class.java)
+            ViewModelProvider(this)[FinancialViewModel::class.java]
 
         _binding = FragmentFinancialBinding.inflate(inflater, container, false)
         val root: View = binding.root
