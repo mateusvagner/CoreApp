@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.pw3.coreapp.ui.students.StudentsFragment">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/students_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_students"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
@@ -28,5 +19,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Place Holder"/>
+        tools:text="Place Holder" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_student_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/light_primary"
+        android:contentDescription="@string/student_add_button"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/light_onPrimary" />
 </androidx.constraintlayout.widget.ConstraintLayout>
