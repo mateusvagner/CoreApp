@@ -1,4 +1,4 @@
-package com.pw3.coreapp.ui.students
+package com.pw3.coreapp.ui.students.all
 
 import android.os.Bundle
 import android.view.LayoutInflater

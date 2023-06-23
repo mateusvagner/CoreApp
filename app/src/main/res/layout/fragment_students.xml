@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pw3.coreapp.ui.students.StudentsFragment">
+    tools:context="com.pw3.coreapp.ui.students.all.StudentsFragment">
 
     <TextView
         android:id="@+id/text_home"
@@ -33,4 +33,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/light_onPrimary" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

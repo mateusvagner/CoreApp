@@ -1,4 +1,4 @@
-package com.pw3.coreapp.ui.students
+package com.pw3.coreapp.ui.students.all
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

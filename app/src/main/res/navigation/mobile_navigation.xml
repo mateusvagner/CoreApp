@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/students"
-        android:name="com.pw3.coreapp.ui.students.StudentsFragment"
+        android:name="com.pw3.coreapp.ui.students.all.StudentsFragment"
         android:label="@string/title_students"
         tools:layout="@layout/fragment_students" />
 
