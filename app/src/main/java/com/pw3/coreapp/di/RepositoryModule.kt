@@ -1,6 +1,6 @@
 package com.pw3.coreapp.di
 
-import com.pw3.coreapp.data.repository.FirebaseStudentRepository
+import com.pw3.coreapp.data.repository.impl.FirebaseStudentRepository
 import com.pw3.coreapp.data.repository.StudentRepository
 import dagger.Binds
 import dagger.Module
