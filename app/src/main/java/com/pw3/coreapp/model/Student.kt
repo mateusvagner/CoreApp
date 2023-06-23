@@ -4,5 +4,5 @@ data class Student(
     val name: String,
     val birthDate: String,
     val status: StudentStatus,
-    val feeStatus: FeeStatus
+    val feeStatus: PaymentStatus
 )
