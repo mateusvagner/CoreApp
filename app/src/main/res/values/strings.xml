@@ -8,6 +8,7 @@
     <string name="title_financial">Financial</string>
     <string name="title_more">More</string>
     <string name="title_login">Login</string>
+    <string name="title_new_student">New Student</string>
 
     <!-- User -->
     <string name="password">Password</string>
@@ -34,7 +35,7 @@
     <string name="student_status_inactive">Inactive</string>
     <string name="student_status_on_pause">On Pause</string>
     <string name="student_payment_status_paid">Paid</string>
-    <string name="student_payment_status_delayed">Delayed</string>
+    <string name="student_payment_status_pending">Pending</string>
     <string name="student_add_button">Student Add Button</string>
 
 </resources>
