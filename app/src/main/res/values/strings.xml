@@ -14,6 +14,7 @@
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
     <string name="save">Save</string>
+    <string name="close">Close</string>
 
     <!-- Alerts -->
     <string name="create_account_failed_title">Something went wrong</string>
@@ -22,6 +23,8 @@
     <string name="email_not_valid_error_message">The email is not valid</string>
     <string name="password_needed_error_message">The password must be filled in</string>
     <string name="password_not_valid_error_message">The password is not valid</string>
+    <string name="new_user_failed_title">Some went wrong saving new student</string>
+    <string name="new_user_save_succeeded_message">New user saved!</string>
 
     <!-- User -->
     <string name="password">Password</string>

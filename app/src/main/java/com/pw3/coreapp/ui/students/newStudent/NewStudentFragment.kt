@@ -1,17 +1,24 @@
 package com.pw3.coreapp.ui.students.newStudent
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.pw3.CoreApp.R
 import com.pw3.CoreApp.databinding.FragmentNewStudentBinding
 import com.pw3.coreapp.model.PaymentStatus
+import com.pw3.coreapp.model.Student
 import com.pw3.coreapp.model.StudentModality
 import com.pw3.coreapp.model.StudentPlan
 import com.pw3.coreapp.model.StudentStatus
+import com.pw3.coreapp.ui.util.showDialogCustom
+import com.pw3.coreapp.ui.util.showSnackbar
 
 class NewStudentFragment : Fragment() {
 
@@ -21,9 +28,7 @@ class NewStudentFragment : Fragment() {
     private val viewModel: NewStudentViewModel by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentNewStudentBinding.inflate(inflater, container, false)
         return binding.root
@@ -98,10 +103,47 @@ class NewStudentFragment : Fragment() {
     }
 
     private fun setupListeners() {
+        binding.buttonSave.setOnClickListener {
+            val imm: InputMethodManager? =
+                requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
+            imm?.hideSoftInputFromWindow(requireView().windowToken, 0)
 
+            val name = binding.editTextName.text.toString()
+            val birthDate = binding.editTextBirthDate.text.toString()
+            val enrollmentDate = binding.editTextEnrollmentDate.text.toString()
+            val paymentDueDate = binding.editTextPaymentDueDate.text.toString()
+            val modality = binding.textModality.text.toString()
+            val plan = binding.textPlan.text.toString()
+            val status = binding.textStatus.text.toString()
+            val paymentStatus = binding.textPaymentStatus.text.toString()
+
+            val student = Student(
+                name = name,
+                birthDate = birthDate,
+                enrollmentDate = enrollmentDate,
+                paymentDueDate = paymentDueDate,
+                modality = modality,
+                plan = plan,
+                status = status,
+                paymentStatus = paymentStatus
+            )
+
+            viewModel.saveStudent(student)
+        }
     }
 
     private fun setupObservers() {
+        viewModel.isSaveStudentSucceeded.observe(viewLifecycleOwner) { isSucceeded ->
+            if (isSucceeded) {
+                showSnackbar(getString(R.string.new_user_save_succeeded_message))
+                findNavController().popBackStack()
+            }
+        }
 
+        viewModel.isSaveStudentFailed.observe(viewLifecycleOwner) { errorMessage ->
+            showDialogCustom(
+                requireContext(), R.string.new_user_failed_title, errorMessage, R.string.close
+            ) { }
+        }
     }
 }
