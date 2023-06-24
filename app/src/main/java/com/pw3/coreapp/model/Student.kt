@@ -1,5 +1,7 @@
 package com.pw3.coreapp.model
 
+import java.io.Serializable
+
 data class Student(
     var id: String? = null,
     var name: String? = null,
@@ -10,4 +12,4 @@ data class Student(
     var plan: String? = null,
     var status: String? = null,
     var paymentStatus: String? = null
-)
+) : Serializable
