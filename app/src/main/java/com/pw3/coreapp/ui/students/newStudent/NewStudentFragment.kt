@@ -77,26 +77,22 @@ class NewStudentFragment : Fragment() {
     }
 
     private fun setupStudentStatusAdapter() {
-        val status = StudentStatus.values().map {
-            getString(it.stringRes)
-        }
+        val status = StudentStatus()
         val adapter = ArrayAdapter(
             requireContext(),
             androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
-            status
+            status.all
         )
 
         binding.textStatus.setAdapter(adapter)
     }
 
     private fun setupStudentPaymentStatusAdapter() {
-        val paymentStatus = PaymentStatus.values().map {
-            getString(it.stringRes)
-        }
+        val paymentStatus = PaymentStatus()
         val adapter = ArrayAdapter(
             requireContext(),
             androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
-            paymentStatus
+            paymentStatus.all
         )
 
         binding.textPaymentStatus.setAdapter(adapter)
@@ -135,14 +131,14 @@ class NewStudentFragment : Fragment() {
     private fun setupObservers() {
         viewModel.isSaveStudentSucceeded.observe(viewLifecycleOwner) { isSucceeded ->
             if (isSucceeded) {
-                showSnackbar(getString(R.string.new_user_save_succeeded_message))
+                showSnackbar(getString(R.string.new_student_save_succeeded_message))
                 findNavController().popBackStack()
             }
         }
 
         viewModel.isSaveStudentFailed.observe(viewLifecycleOwner) { errorMessage ->
             showDialogCustom(
-                requireContext(), R.string.new_user_failed_title, errorMessage, R.string.close
+                requireContext(), R.string.new_student_failed_title, errorMessage, R.string.close
             ) { }
         }
     }
