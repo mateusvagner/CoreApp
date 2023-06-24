@@ -10,17 +10,10 @@
     <string name="title_login">Login</string>
     <string name="title_new_student">New Student</string>
 
-    <!-- User -->
-    <string name="password">Password</string>
-    <string name="email">Email</string>
-    <string name="login">Login</string>
-    <string name="create_account">Create Account</string>
-    <string name="new_account">New Account</string>
-    <string name="logout">Logout</string>
-
     <!-- Action -->
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
+    <string name="save">Save</string>
 
     <!-- Alerts -->
     <string name="create_account_failed_title">Something went wrong</string>
@@ -30,6 +23,14 @@
     <string name="password_needed_error_message">The password must be filled in</string>
     <string name="password_not_valid_error_message">The password is not valid</string>
 
+    <!-- User -->
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="new_account">New Account</string>
+    <string name="logout">Logout</string>
+
     <!-- Student -->
     <string name="student_status_active">Active</string>
     <string name="student_status_inactive">Inactive</string>
@@ -37,5 +38,14 @@
     <string name="student_payment_status_paid">Paid</string>
     <string name="student_payment_status_pending">Pending</string>
     <string name="student_add_button">Student Add Button</string>
+
+    <string name="student_name_label">Name</string>
+    <string name="student_birth_date_label">Birth date</string>
+    <string name="student_enrollment_date_label">Enrollment date</string>
+    <string name="student_payment_due_date_label">Payment due date</string>
+    <string name="student_modality_label">Modality</string>
+    <string name="student_plan_label">Plan</string>
+    <string name="student_status_label">Status</string>
+    <string name="student_payment_status_label">Payment status</string>
 
 </resources>
