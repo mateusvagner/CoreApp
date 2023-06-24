@@ -9,12 +9,14 @@
     <string name="title_more">More</string>
     <string name="title_login">Login</string>
     <string name="title_new_student">New Student</string>
+    <string name="title_edit_student">Edit Student</string>
 
     <!-- Action -->
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
     <string name="save">Save</string>
     <string name="close">Close</string>
+    <string name="update">Update</string>
 
     <!-- Alerts -->
     <string name="create_account_failed_title">Something went wrong</string>
@@ -23,8 +25,12 @@
     <string name="email_not_valid_error_message">The email is not valid</string>
     <string name="password_needed_error_message">The password must be filled in</string>
     <string name="password_not_valid_error_message">The password is not valid</string>
-    <string name="new_user_failed_title">Some went wrong saving new student</string>
-    <string name="new_user_save_succeeded_message">New user saved!</string>
+    <string name="new_student_failed_title">Error saving new student</string>
+    <string name="new_student_save_succeeded_message">New student saved!</string>
+    <string name="new_student_update_succeeded_message">Student updated!</string>
+    <string name="get_all_students_failed_title">Error getting all students</string>
+    <string name="update_student_alert_title">Update Student</string>
+    <string name="update_student_alert_message">By clicking SAVE you will update the current student.</string>
 
     <!-- User -->
     <string name="password">Password</string>

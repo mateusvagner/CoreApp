@@ -27,10 +27,13 @@
         android:id="@+id/students"
         android:name="com.pw3.coreapp.ui.students.allStudents.StudentsFragment"
         android:label="@string/title_students"
-        tools:layout="@layout/fragment_students" >
+        tools:layout="@layout/fragment_students">
         <action
             android:id="@+id/action_students_to_newStudentFragment"
             app:destination="@id/newStudentFragment" />
+        <action
+            android:id="@+id/action_students_to_editStudentFragment"
+            app:destination="@id/editStudentFragment" />
     </fragment>
 
     <fragment
@@ -67,6 +70,16 @@
         android:id="@+id/newStudentFragment"
         android:name="com.pw3.coreapp.ui.students.newStudent.NewStudentFragment"
         android:label="@string/title_new_student"
-        tools:layout="@layout/fragment_new_student"/>
+        tools:layout="@layout/fragment_new_student" />
+
+    <fragment
+        android:id="@+id/editStudentFragment"
+        android:name="com.pw3.coreapp.ui.students.editStudent.EditStudentFragment"
+        android:label="@string/title_edit_student"
+        tools:layout="@layout/fragment_new_student">
+        <argument
+            android:name="student"
+            app:argType="com.pw3.coreapp.model.Student" />
+    </fragment>
 
 </navigation>
