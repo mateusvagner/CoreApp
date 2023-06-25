@@ -37,7 +37,7 @@ fun List<Student>.filterStudentsPaymentDayWithinNext5Days(): List<Student> {
 
     return this.filter { student ->
         val daysDifference = student.paymentDueDate?.toDouble()?.minus(today)
-        daysDifference!! <= 5 &&  daysDifference > 0
+        daysDifference!! <= 5 &&  daysDifference > 0 && !student.paymentStatus.equals("Pago")
     }
 }
 
@@ -47,6 +47,6 @@ fun List<Student>.filterStudentsPaymentDayPending(): List<Student> {
 
     return this.filter { student ->
         val daysDifference = student.paymentDueDate?.toDouble()?.minus(today)
-        daysDifference!! < 0
+        daysDifference!! < 0 && !student.paymentStatus.equals("Pago")
     }
 }

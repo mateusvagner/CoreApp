@@ -1,5 +1,6 @@
 package com.pw3.coreapp.ui.students.studentDetail
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
@@ -16,6 +17,7 @@ import androidx.navigation.fragment.navArgs
 import com.pw3.CoreApp.R
 import com.pw3.CoreApp.databinding.FragmentStudentDetailBinding
 import com.pw3.coreapp.ui.util.showDialog
+import com.pw3.coreapp.ui.util.showSnackbar
 
 class StudentDetailFragment : Fragment() {
 
@@ -38,6 +40,7 @@ class StudentDetailFragment : Fragment() {
 
         setupMenu()
         setupViews()
+        setupObservers()
     }
 
     private fun setupMenu() {
@@ -57,6 +60,11 @@ class StudentDetailFragment : Fragment() {
                         return true
                     }
 
+                    R.id.share_student -> {
+                        shareStudent()
+                        return true
+                    }
+
                     R.id.delete_student -> {
                         showDialog(
                             requireContext(),
@@ -68,7 +76,6 @@ class StudentDetailFragment : Fragment() {
 
                         return true
                     }
-
                     else -> false
                 }
             }
@@ -76,6 +83,16 @@ class StudentDetailFragment : Fragment() {
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
     }
 
+    private fun shareStudent() {
+        val student = args.student.copy(id = "")
+        val intent = Intent(Intent.ACTION_SEND).apply {
+            type = "text/plain"
+            putExtra(Intent.EXTRA_TEXT, student.toString())
+        }
+
+        startActivity(Intent.createChooser(intent, getString(R.string.share)))
+
+    }
     private fun deleteStudent() {
         viewModel.deleteStudent(args.student)
     }
@@ -91,5 +108,14 @@ class StudentDetailFragment : Fragment() {
         binding.textPlan.text = student.plan
         binding.textStatus.text = student.status
         binding.textPaymentStatus.text = student.paymentStatus
+    }
+
+    private fun setupObservers() {
+        viewModel.isDeleteStudentSucceeded.observe(viewLifecycleOwner) { isDeleteSucceeded ->
+            if (isDeleteSucceeded) {
+                showSnackbar(getString(R.string.delete_student_succeeded))
+                findNavController().popBackStack()
+            }
+        }
     }
 }

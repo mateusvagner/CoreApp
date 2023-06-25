@@ -51,6 +51,8 @@
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
                 android:layout_marginTop="@dimen/spacing_s"
                 android:textAlignment="center"
                 android:textSize="12sp"

@@ -70,6 +70,6 @@ class StudentsViewModel : ViewModel() {
 
         _allStudents.postValue(students)
         _studentsUpcomingBirthday.postValue(upcomingBirthDay)
-        _studentsPaymentDueDate.postValue(paymentDueDate)
+        _studentsPaymentDueDate.postValue(paymentDueDate.sortedBy { it.paymentDueDate?.toDouble() })
     }
 }

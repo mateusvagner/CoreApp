@@ -19,6 +19,7 @@
     <string name="close">Close</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
+    <string name="share">Share</string>
 
     <!-- Alerts -->
     <string name="create_account_failed_title">Something went wrong</string>
@@ -35,6 +36,7 @@
     <string name="update_student_alert_message">By clicking SAVE you will update the current student.</string>
     <string name="delete_student_alert_title">Delete Student</string>
     <string name="delete_student_alert_message">By clicking DELETE AVE you will permanently delete the current student.</string>
+    <string name="delete_student_succeeded">Student deleted!</string>
 
     <!-- User -->
     <string name="password">Password</string>
