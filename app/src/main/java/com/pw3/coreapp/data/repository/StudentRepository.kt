@@ -8,7 +8,7 @@ interface StudentRepository {
 
     fun saveStudent(
         student: Student,
-        onSuccessListener: OnSuccessListener<Student>,
+        onSuccessListener: OnSuccessListener<in Void>,
         onFailureListener: OnFailureListener
     )
 }

@@ -21,9 +21,11 @@ class FirebaseStudentRepository : StudentRepository {
 
     override fun saveStudent(
         student: Student,
-        onSuccessListener: OnSuccessListener<Student>,
+        onSuccessListener: OnSuccessListener<in Void>,
         onFailureListener: OnFailureListener
     ) {
-        TODO("Not yet implemented")
+        studentsDatabaseReference.push().setValue(student)
+            .addOnSuccessListener(onSuccessListener)
+            .addOnFailureListener(onFailureListener)
     }
 }
