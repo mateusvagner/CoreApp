@@ -32,8 +32,8 @@
             android:id="@+id/action_students_to_newStudentFragment"
             app:destination="@id/newStudentFragment" />
         <action
-            android:id="@+id/action_students_to_editStudentFragment"
-            app:destination="@id/editStudentFragment" />
+            android:id="@+id/action_students_to_studentDetailFragment"
+            app:destination="@id/studentDetailFragment" />
     </fragment>
 
     <fragment
@@ -80,6 +80,19 @@
         <argument
             android:name="student"
             app:argType="com.pw3.coreapp.model.Student" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/studentDetailFragment"
+        android:name="com.pw3.coreapp.ui.students.studentDetail.StudentDetailFragment"
+        android:label="@string/title_student_detail"
+        tools:layout="@layout/fragment_student_detail">
+        <argument
+            android:name="student"
+            app:argType="com.pw3.coreapp.model.Student" />
+        <action
+            android:id="@+id/action_studentDetailFragment_to_editStudentFragment"
+            app:destination="@id/editStudentFragment" />
     </fragment>
 
 </navigation>

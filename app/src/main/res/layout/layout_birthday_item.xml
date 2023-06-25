@@ -48,20 +48,6 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!--        <ImageView-->
-            <!--            android:id="@+id/image_student"-->
-            <!--            android:layout_width="64dp"-->
-            <!--            android:layout_height="64dp"-->
-            <!--            android:background="@drawable/background_circle_image"-->
-            <!--            android:clipToOutline="true"-->
-            <!--            android:contentDescription="@string/person_image"-->
-            <!--            android:scaleType="centerCrop"-->
-            <!--            android:src="@drawable/random_person_1"-->
-            <!--            app:layout_constraintEnd_toEndOf="parent"-->
-            <!--            app:layout_constraintStart_toStartOf="parent"-->
-            <!--            app:layout_constraintTop_toTopOf="parent"-->
-            <!--            tools:targetApi="s" />-->
-
             <TextView
                 android:id="@+id/text_student_birthday"
                 style="@style/TextAppearance.AppCompat.Title"

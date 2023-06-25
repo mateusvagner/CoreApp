@@ -98,7 +98,7 @@ class StudentsFragment : Fragment() {
 
     private fun navigateToStudentDetailScreen(student: Student) {
         findNavController().navigate(
-            StudentsFragmentDirections.actionStudentsToEditStudentFragment(student)
+            StudentsFragmentDirections.actionStudentsToStudentDetailFragment(student)
         )
     }
 }
