@@ -57,4 +57,11 @@
     <string name="student_status_label">Status</string>
     <string name="student_payment_status_label">Payment status</string>
 
+    <string name="student_upcoming_birthdays">Upcoming birthdays</string>
+    <string name="student_tuition">Tuition</string>
+    <string name="student_all">All students</string>
+    <string name="person_image">Person image</string>
+
+    <string name="student_payment_due_day">Day %s</string>
+
 </resources>

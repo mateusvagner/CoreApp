@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,20 +7,91 @@
     android:layout_height="match_parent"
     tools:context="com.pw3.coreapp.ui.students.allStudents.StudentsFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Place Holder" />
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/spacing_xxl">
+
+            <TextView
+                android:id="@+id/text_upcoming_birthdays"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_base"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:text="@string/student_upcoming_birthdays"
+                android:textAllCaps="true"
+                android:textColor="@color/light_onSurfaceVariant"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_upcoming_birthdays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_base"
+                android:layout_marginTop="@dimen/spacing_base"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/text_upcoming_birthdays"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_birthday_item" />
+
+            <TextView
+                android:id="@+id/text_tuition"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_base"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:text="@string/student_tuition"
+                android:textAllCaps="true"
+                android:textColor="@color/light_onSurfaceVariant"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/recycler_view_upcoming_birthdays" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_tuition"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/spacing_base"
+                android:layout_marginTop="@dimen/spacing_base"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/text_tuition"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_tuition_item" />
+
+            <TextView
+                android:id="@+id/text_all_students"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_base"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:text="@string/student_all"
+                android:textAllCaps="true"
+                android:textColor="@color/light_onSurfaceVariant"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/recycler_view_tuition" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_all_students"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_base"
+                android:layout_marginTop="@dimen/spacing_base"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/text_all_students"
+                tools:itemCount="2"
+                tools:listitem="@layout/layout_all_students_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_student_button"

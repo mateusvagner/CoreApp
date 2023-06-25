@@ -88,4 +88,7 @@
 
     <color name="extra_orange">#FFA44E</color>
     <color name="extra_blue">#6CA7B6</color>
+
+    <color name="extra_purple">#8660FF</color>
+    <color name="extra_purple_light">#E2D8FF</color>
 </resources>
