@@ -20,6 +20,7 @@
     <string name="update">Update</string>
     <string name="delete">Delete</string>
     <string name="share">Share</string>
+    <string name="about">About</string>
 
     <!-- Alerts -->
     <string name="create_account_failed_title">Something went wrong</string>
@@ -69,5 +70,8 @@
     <string name="person_image">Person image</string>
 
     <string name="student_payment_due_day">Day %s</string>
+    <string name="college_class_name">Disciplina: Programação para Web III</string>
+    <string name="class_student_name">Aluno: Mateus Vagner</string>
+    <string name="app_description">App: Um aplicativo focado para gestão de estúdios de Pilates de pequeno a médio porte.</string>
 
 </resources>

@@ -2,10 +2,15 @@ package com.pw3.coreapp.ui.students.allStudents
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pw3.CoreApp.R
@@ -14,6 +19,7 @@ import com.pw3.coreapp.model.Student
 import com.pw3.coreapp.ui.students.allStudents.adapter.BirthdayItemAdapter
 import com.pw3.coreapp.ui.students.allStudents.adapter.StudentItemAdapter
 import com.pw3.coreapp.ui.students.allStudents.adapter.TuitionItemAdapter
+import com.pw3.coreapp.ui.util.showAlertWithImage
 import com.pw3.coreapp.ui.util.showDialogCustom
 
 class StudentsFragment : Fragment() {
@@ -39,6 +45,7 @@ class StudentsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupMenu()
         setupListeners()
         setupAdapters()
         setupObservers()
@@ -48,6 +55,27 @@ class StudentsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    private fun setupMenu() {
+        requireActivity().addMenuProvider(object : MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                menuInflater.inflate(R.menu.students_menu, menu)
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                return when (menuItem.itemId) {
+                    R.id.about_the_app -> {
+                        showAlertWithImage(requireContext())
+                        return true
+                    }
+
+                    else -> false
+                }
+            }
+
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
+    }
+
 
     private fun setupListeners() {
         binding.addStudentButton.setOnClickListener {
