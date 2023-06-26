@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Core App</string>
+
+    <!-- Título da tela -->
+    <string name="title_welcome">Bem-vindo</string>
+    <string name="title_calendar">Calendário</string>
+    <string name="title_students">Estudantes</string>
+    <string name="title_financial">Financeiro</string>
+    <string name="title_more">Mais</string>
+    <string name="title_login">Login</string>
+    <string name="title_new_student">Novo Estudante</string>
+    <string name="title_edit_student">Editar Estudante</string>
+    <string name="title_student_detail">Detalhes do Estudante</string>
+
+    <!-- Ação -->
+    <string name="cancel">Cancelar</string>
+    <string name="ok">OK</string>
+    <string name="save">Salvar</string>
+    <string name="close">Fechar</string>
+    <string name="update">Atualizar</string>
+    <string name="delete">Excluir</string>
+    <string name="share">Compartilhar</string>
+    <string name="about">Sobre</string>
+
+    <!-- Alertas -->
+    <string name="create_account_failed_title">Algo deu errado</string>
+    <string name="create_account_failed_message">Erro ao criar uma nova conta</string>
+    <string name="email_needed_error_message">O e-mail deve ser preenchido</string>
+    <string name="email_not_valid_error_message">O e-mail não é válido</string>
+    <string name="password_needed_error_message">A senha deve ser preenchida</string>
+    <string name="password_not_valid_error_message">A senha não é válida</string>
+    <string name="new_student_failed_title">Erro ao salvar novo estudante</string>
+    <string name="new_student_save_succeeded_message">Novo estudante salvo!</string>
+    <string name="new_student_update_succeeded_message">Estudante atualizado!</string>
+    <string name="get_all_students_failed_title">Erro ao obter todos os estudantes</string>
+    <string name="update_student_alert_title">Atualizar Estudante</string>
+    <string name="update_student_alert_message">Ao clicar em SALVAR você atualizará o estudante atual.</string>
+    <string name="delete_student_alert_title">Excluir Estudante</string>
+    <string name="delete_student_alert_message">Ao clicar em EXCLUIR você excluirá permanentemente o estudante atual.</string>
+    <string name="delete_student_succeeded">Estudante excluído!</string>
+
+    <!-- Usuário -->
+    <string name="password">Senha</string>
+    <string name="email">E-mail</string>
+    <string name="login">Login</string>
+    <string name="create_account">Criar Conta</string>
+    <string name="new_account">Nova Conta</string>
+    <string name="logout">Sair</string>
+
+    <!-- Estudante -->
+    <string name="student_status_active">Ativo</string>
+    <string name="student_status_inactive">Inativo</string>
+    <string name="student_status_on_pause">Em Pausa</string>
+    <string name="student_payment_status_paid">Pago</string>
+    <string name="student_payment_status_pending">Pendente</string>
+    <string name="student_add_button">Botão Adicionar Estudante</string>
+
+    <string name="student_name_label">Nome</string>
+    <string name="student_birth_date_label">Data de Nascimento</string>
+    <string name="student_enrollment_date_label">Data de Matrícula</string>
+    <string name="student_payment_due_date_label">Data de Vencimento do Pagamento</string>
+    <string name="student_modality_label">Modalidade</string>
+    <string name="student_plan_label">Plano</string>
+    <string name="student_status_label">Status</string>
+    <string name="student_payment_status_label">Status do Pagamento</string>
+
+    <string name="student_upcoming_birthdays">Próximos Aniversários</string>
+    <string name="student_tuition">Mensalidade</string>
+    <string name="student_all">Todos os Estudantes</string>
+    <string name="person_image">Imagem da Pessoa</string>
+
+    <string name="student_payment_due_day">Dia %s</string>
+
+    <string name="college_class_name">Disciplina: Programação para Web III</string>
+    <string name="class_student_name">Aluno: Mateus Vagner</string>
+    <string name="app_description">App: Um aplicativo focado para gestão de estúdios de Pilates de pequeno a médio porte.</string>
+</resources>
